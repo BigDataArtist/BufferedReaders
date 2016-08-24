@@ -1,0 +1,27 @@
+package BufferedWriters;
+import java.io.BufferedWriter;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+public class MyBufferedWriter {
+
+	public static void main(String args[]){
+		
+		try{
+			String destinationpath ="/Users/AddytheRiot/Desktop.mytextfile.txt";
+			BufferedWriter bw = new BufferedWriter(new FileWriter(destinationpath));
+			bw.write("Write what you wanna write here man");
+			bw.close();
+		
+	
+		}
+		catch( IOException ioex){
+			System.out.println(ioex.getMessage()+" this is such a drama");
+		}
+		
+		 
+	}
+}
